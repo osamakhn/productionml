@@ -10,8 +10,9 @@
           <h2 class="nav-title">{{ site.title }}</h2>
         </a>
         <ul>
-          <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-          <li><a href="{{ site.baseurl }}/">Posts</a></li>
+          <li><a href="{{ '/manifesto' | prepend: site.baseurl }}">Manifesto</a></li>
+          <li><a href="{{ '/cointelligence' | prepend: site.baseurl  }}">Co-intelligence</a></li>
+          <li><a href="{{ '/announcements' | prepend: site.baseurl  }}">Announcements</a></li>
         </ul>
     </div>
   </nav>
@@ -22,8 +23,9 @@
 
     <footer>
       <span>
-        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; {{ site.title }} <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
       </span>
     </footer>
+    {% include foot.html %}
   </body>
 </html>

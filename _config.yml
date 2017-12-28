@@ -2,10 +2,11 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Tale
+title:          Production ML
 paginate:       5
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+baseurl:        "/productionml"
+url:            "http://www.productionml.org"
+timezone:       America/Vancouver
 
 # Assets
 sass:
@@ -17,15 +18,11 @@ markdown:       kramdown
 
 # About
 author:
-  name:         Chester How
-  url:          http://chester.how
-  email:        chesterhow@gmail.com
+  name:         Osama Khan
+  url:          http://www.osamakhan.com
+  email:        osamakhn@gmail.com
 
 # Custom vars
 version:        3.4.1
 github:
-  repo:         https://github.com/chesterhow/tale
-
-# Gems
-plugins:
-  - jekyll-paginate
+  repo:         https://github.com/osamakhn/productionml

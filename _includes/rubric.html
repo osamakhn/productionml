@@ -1,0 +1,123 @@
+<section>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+        }
+
+        .accordion:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+    </style>
+
+    {% for set in site.data.rubric %}
+    <button class="accordion">{{ set.title }}</button>
+    <div class="panel">
+        <table>
+            <colgroup>
+                <col width="5%" />
+                <col width="75%" />
+                <col width="5%" />
+                <col width="15%" />
+            </colgroup>
+            <thead></thead>
+            <tbody>
+                {% for question in set.questions %}
+                <tr>
+                    <td markdown="span">{{question.id}}</td>
+                    <td markdown="span">{{question.text}}</td>
+                    <td title="{{question.hint}}">&#xFFFD;</td>
+                    <td markdown="span">
+                        <select name="{{question.id}}" id="{{question.id}}" onchange="calculateScore()">
+                            <option value="0" selected>No process</option>
+                            <option value="1">Manual Process</option>
+                            <option value="2">Automated Process</option>
+                        </select>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endfor %}
+
+    <div>
+        <br>
+        <em>{ Your Score }</em>
+        <strong id="rubric-result">0 points: More of a research project than a productionized system</strong>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        function getRange(score) {
+            if (score == 0) {
+                return "0 points: More of a research project than a productionized system";
+            } else if (score >= 1 && score <= 2) {
+                return "1-2 points: Not totally untested, but it is worth considering the possibility of serious holes in reliability.";
+            } else if (score >= 3 && score <= 4) {
+                return "3-4 points: There’s been first pass at basic productionization, but additional investment may be needed.";
+            } else if (score >= 5 && score <= 6) {
+                return "5-6 points: Reasonably tested, but it’s possible that more of those tests and procedures may be automated.";
+            } else if (score >= 7 && score <= 10) {
+                return "7-10 points: Strong levels of automated testing and monitoring, appropriate for mission- critical systems.";
+            } else if (score >= 12) {
+                return "12+ points: Exceptional levels of automated testing and monitoring.";
+            } else {
+                return "Error: Please refresh page.";
+            }
+        }
+
+        function calculateScore() {
+            var score1 = parseInt(document.getElementById("1-1").value) + parseInt(document.getElementById("1-2").value) + parseInt(document.getElementById("1-3").value) + parseInt(document.getElementById("1-4").value) + parseInt(document.getElementById("1-5").value) + parseInt(document.getElementById("1-6").value) + parseInt(document.getElementById("1-7").value);
+            var score2 = parseInt(document.getElementById("2-1").value) + parseInt(document.getElementById("2-2").value) + parseInt(document.getElementById("2-3").value) + parseInt(document.getElementById("2-4").value) + parseInt(document.getElementById("2-5").value) + parseInt(document.getElementById("2-6").value) + parseInt(document.getElementById("2-7").value);
+            var score3 = parseInt(document.getElementById("3-1").value) + parseInt(document.getElementById("3-2").value) + parseInt(document.getElementById("3-3").value) + parseInt(document.getElementById("3-4").value) + parseInt(document.getElementById("3-5").value) + parseInt(document.getElementById("3-6").value) + parseInt(document.getElementById("3-7").value);
+            var score4 = parseInt(document.getElementById("4-1").value) + parseInt(document.getElementById("4-2").value) + parseInt(document.getElementById("4-3").value) + parseInt(document.getElementById("4-4").value) + parseInt(document.getElementById("4-5").value) + parseInt(document.getElementById("4-6").value) + parseInt(document.getElementById("4-7").value);
+            var minScore = Math.min(score1, score2, score3, score4);
+            document.getElementById("rubric-result").innerText = getRange(minScore);;
+        }
+    </script>
+
+</section>

@@ -1,7 +1,10 @@
 .pagination {
   border-top: .5px solid $grey-2;
+  border-bottom: .5px solid $grey-2;
   font-family: $palatino;
-  padding-top: 2rem;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  margin-bottom: 3rem;
   position: relative;
   text-align: center;
 

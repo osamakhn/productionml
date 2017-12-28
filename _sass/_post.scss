@@ -12,10 +12,27 @@
     }
   }
 
+  &-footnotes {
+    font-style: italic;
+    font-family: $palatino;
+    font-size: 1rem;
+    text-align: left;
+    border-bottom: .5px dashed $grey-2;
+    margin: 0 0 5rem;
+  }
+
   &-title {
     color: $default-shade;
     font-family: $sans-font;
     font-size: 4rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  &-subtitle {
+    color: $default-shade;
+    font-family: $sans-font;
+    font-size: 2.5rem;
     margin: 1rem 0;
     text-align: center;
   }
@@ -25,6 +42,13 @@
     display: block;
     margin: 0 auto 3rem;
     width: 4rem;
+  }
+
+  &-subline {
+    border-top: 0.4rem solid $default-shade;
+    display: block;
+    margin: 0 auto 0.05rem;
+    width: 2.5rem;
   }
 
   p {
