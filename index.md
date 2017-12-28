@@ -7,7 +7,7 @@ title: hello.
 
 > To make great products: **do machine learning like the great engineer you are, not like the great machine learning expert you aren't** <sup>[[1](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf)]</sup>.
 
-All of our collective intelligence from workshops, talks, meetups is captured [here]({{site.baseurl}}/cointelligence/).
+All of our collective intelligence from workshops, talks and meetups is captured [here]({{site.baseurl}}/cointelligence/).
 
 [What's your ML test score?]({{'/rubric-for-machine-learning/' | prepend: site.baseurl}})
 
