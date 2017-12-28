@@ -4,7 +4,7 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          Production ML
 paginate:       5
-baseurl:        "/productionml"
+baseurl:        ""
 url:            "http://www.productionml.org"
 timezone:       America/Vancouver
 
@@ -26,3 +26,7 @@ author:
 version:        3.4.1
 github:
   repo:         https://github.com/osamakhn/productionml
+
+# Gems
+plugins:
+  - jekyll-paginate
