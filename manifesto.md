@@ -18,7 +18,7 @@ The data engineers want to automate these engineering handoffs, deployments and 
 
 ![Machine Learning Spectrum]({{ "/assets/ml-spectrum.png" | absolute_url }})
 
-Our objective is to work through production technologies such as (but not limited to) Apache Spark[^4], ModelDB[^5], MLeap[^6], Apache MXNet[^7] and untangle cutting edge research being done in the area by pioneers such as Rise Lab[^8], Google BRAIN Team[^9] and Stanford DAWN[^10] to reduce the time it takes data scientists take their models to production, at scale eventually being able to build pipelines where models are trained, deployed, tuned, selected in an online manner following best practices[^11] and being weary of _"The High-Interest Credit Card of Technical Debt"_[^12].
+Our objective is to work through production technologies such as (but not limited to) Apache Spark[^4], ModelDB[^5], MLeap[^6], Apache MXNet[^7] and untangle cutting edge research being done in the area by pioneers such as Rise Lab[^8], Google BRAIN Team[^9] and Stanford DAWN[^10] to reduce the time it takes for the data scientists to take their models to production, at scale and eventually being able to build pipelines where models are trained, deployed, tuned, selected in an online manner following best practices[^11] and being weary of _"The High-Interest Credit Card of Technical Debt"_[^12].
 
 We aim to achieve this through bridge workshops (to help data scientists become abreast of good software engineering practices, cloud computing[^13] and tools like docker) and meetups (to discuss research paper, follow courses and host talks on various related topics).
 
