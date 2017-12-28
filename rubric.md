@@ -16,4 +16,4 @@ permalink: /rubric-for-machine-learning/
 <br>
 <hr>
 <span class="post-footnotes">Footnotes:</span>
-> [^1]: [What's your ML Test Score? A rubric for ML production systems](link)
+> [^1]: [What's your ML Test Score? A rubric for ML production systems](https://research.google.com/pubs/pub45742.html)
