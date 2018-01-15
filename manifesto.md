@@ -20,7 +20,7 @@ The data engineers want to automate these engineering handoffs, deployments and 
 
 Today, 'bias' is a bug (in data-driven products) and models need to be secure, transparent and localized. We need machine learning to monitor models at scale [^4].
 
-Our objective is to work through production technologies such as (but not limited to) Apache Spark[^5], ModelDB[^6], MLeap[^7], Apache MXNet[^8] and untangle cutting edge research being done in the area by pioneers such as Rise Lab[^9], Google BRAIN Team[^10] and Stanford DAWN[^11] to reduce the time it takes for teams to take their models to production, at scale and eventually being able to build pipelines where models are trained, deployed, tuned, selected in an online manner following best practices[^12] and being weary of _"The High-Interest Credit Card of Technical Debt"_[^14].
+Our objective is to work through production technologies such as (but not limited to) Apache Spark[^5], ModelDB[^6], MLeap[^7], Apache MXNet[^8] and untangle cutting edge research being done in the area by pioneers such as Rise Lab[^9], Google BRAIN Team[^10] and Stanford DAWN[^11] to reduce the time it takes for teams to take their models to production, at scale and eventually being able to build pipelines where models are trained, deployed, tuned, selected in an online manner following best practices[^12] and being weary of _"The High-Interest Credit Card of Technical Debt"_[^13].
 
 We aim to achieve this through bridge workshops, meetups and content aggregation thereby helping solid data engineers in _learn enough machine learning to be dangerous_ and turn into _unicorns_ aka __Machine Learning Engineers__[^14].
 
@@ -39,5 +39,4 @@ We aim to achieve this through bridge workshops, meetups and content aggregation
 [^11]: [Stanford DAWN](http://dawn.cs.stanford.edu/)
 [^12]: [Rules for Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf)
 [^13]: [Machine Learning: The High-Interest Credit Card of Technical Debt](https://research.google.com/pubs/pub43146.html)
-[^14]: [Stanford-CS349D: Cloud Computing Technology](https://web.stanford.edu/class/cs349d/)
-[^15]: [What are machine learning engineers?](https://www.oreilly.com/ideas/what-are-machine-learning-engineers)
+[^14]: [What are machine learning engineers?](https://www.oreilly.com/ideas/what-are-machine-learning-engineers)
